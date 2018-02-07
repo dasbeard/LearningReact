@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
-// import ErrorBoundry from './ErrorBoundry/ErrorBoundry';
 
 class App extends Component {
   state = {
@@ -51,7 +50,6 @@ class App extends Component {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
-            // return <ErrorBoundry key={person.id}> // Used with Error boundries, Must wrap errored componenet and the key needs to beadded
             return <Person
                 click={ () => this.deletePersonHandler(index)}
                 key={person.id}
